@@ -27,6 +27,6 @@ src = "wagtail_celery_results/__init__.py"
 [[file]]
 src = "pyproject.toml"
 
-[[file]]
-src = "docs/source/conf.py"
-search = 'release = "{current_version}"'
+# [[file]]
+# src = "docs/source/conf.py"
+# search = 'release = "{current_version}"'
