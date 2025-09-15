@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wagtail-celery-results"
-version = "0.1.0-rc0"
+version = "0.1.0"
 description = "Display celery results task in admin"
 authors = [
     {name = "WebU dev team", email = "contact@webu.coop"},
