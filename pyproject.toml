@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wagtail-celery-results"
+version = "0.1.0-rc0"
+description = "Display celery results task in admin"
+authors = [
+    {name = "WebU dev team", email = "contact@webu.coop"},
+]
+readme = "README.md"
+requires-python = ">= 3.6"
+dependencies = [
+    "wagtail",
+    "django-celery-results"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: Django",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+keywords=["django", "wagtail", "celery"]
+
+[project.urls]
+Homepage = "https://github.com/webu/wagtail-celery-results"
+Issues = "https://github.com/webu/wagtail-celery-results/issues"
+
+[tool.ruff]
+    include = ["pyproject.toml", "wagtail_celery_results/**/*.py"]
+    line-length = 99
+    extend-exclude = [
+        "__pycache__",
+        "migrations"
+    ]
+
+[tool.ruff.lint]
+    select = [
+        "F401", # unused imports
+        "I",
+    ] # https://docs.astral.sh/ruff/rules
+
+[tool.ruff.lint.isort]
+    length-sort = false
+    force-single-line = true
+    force-sort-within-sections = true
+    section-order = ["future", "standard-library", "pylib", "django", "third-party", "first-party", "local-folder"]
+
+[tool.ruff.lint.isort.sections]
+"django" = ["django"]
+
+[tool.pyright]
+#     exclude = ["python-env"]
+    venvPath = "."
+    venv = "./.venv"
